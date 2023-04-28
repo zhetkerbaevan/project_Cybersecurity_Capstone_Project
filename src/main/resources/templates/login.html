@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+</head>
+		<div>
+			<form th:action="@{'/auth'}" method="POST" >
+				<label>Username</label>
+				<input type="text" name="username_field" />
+				<label>Password</label>
+				<input type="password" name="password_field" />
+				<button type="submit">SIGN IN</button>
+			</form>
+		</div>
+</html>

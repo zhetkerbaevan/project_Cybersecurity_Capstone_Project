@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Center</title>
+</head>
+<body>
+<h1>Message Center</h1>
+<a th:href="@{'/send_message'}">Send message</a>
+<h3>Your messages:</h3>
+<a th:href="@{'/my_messages'}">My messages</a>
+<a class="nav-link" style="color:white" sec:authorize="isAuthenticated()" href="JavaScript:void(0)" onclick="document.getElementById('logoutFormId').submit()">Logout</a>
+<form th:action="@{'/logout'}" method="post" id="logoutFormId" sec:authorize="isAuthenticated()"></form>
+</body>
+</html>
